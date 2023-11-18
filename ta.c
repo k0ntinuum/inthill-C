@@ -15,8 +15,8 @@ void print_block(int code) {
 		case 3 : set_color(0,255,255);break;
 		case 4 : set_color(0,255,0);break;
     }
-	//printf("\u2588");
-	printf("\u2592");
+	printf("\u2588");
+	//printf("\u2592");
 }
 void seed() {
 	for (int c = 0; c < cols; c++) for (int r = 0; r < rows; r++) cell[r][c] = rand()%2;
@@ -107,8 +107,9 @@ void move_ant(int a) {
 		case 0 : set_color(0,0,0);break;
 		case 1 : set_color(ant_r[a],ant_g[a],ant_b[a]);break;
 	}
-	//set_color(ant_r[a],ant_g[a],ant_b[a]);
+	set_color(ant_r[a],ant_g[a],ant_b[a]);
 	printf("\u2592");
+	//printf("\u2588");
 	//print_block(cell[ant_row[a]][ant_col[a]]);
 	switch (c) {
 		case 0: ant_row[a] = safe_row(ant_row[a]-1);ant_col[a] = safe_col(ant_col[a]-1);break;
